@@ -1,0 +1,22 @@
+---
+- name: Setup App
+  hosts: app
+  gather_facts: false
+  become: true
+  tasks:
+    - name: "Include role.postgres"
+      ansible.builtin.include_role:
+        name: "role.postgres"
+      vars:
+        postgresql_role: master
+
+- name: Setup App
+  hosts: sakura
+  gather_facts: false
+  become: true
+  tasks:
+    - name: "Include role.postgres"
+      ansible.builtin.include_role:
+        name: "role.postgres"
+      vars:
+        postgresql_role: replica
