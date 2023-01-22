@@ -1,7 +1,7 @@
 ---
 postgresql_role: master
 
-postgresql_version: 14
+postgresql_version: 15
 
 postgresql_additional_packages:
   - gnupg
