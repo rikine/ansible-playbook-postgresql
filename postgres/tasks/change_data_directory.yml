@@ -8,7 +8,6 @@
   synchronize:
     src: "{{ postgresql_data_dir }}"
     dest: "{{ postgresql_new_data_dir }}"
-  delegate_to: "srv1"
 
 - name: "Postgresql | Configure postgresql.conf"
   lineinfile:
