@@ -6,4 +6,3 @@
     owner: postgres
     group: postgres
     mode: 0600
-    

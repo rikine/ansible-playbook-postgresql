@@ -16,4 +16,3 @@
   become_user: postgres
   command: "{{ postgresql_data_dir }}/bin/initdb -D {{ postgresql_data_dir }}/main"
   when: not pgdata_dir_version.stat.exists
-  
