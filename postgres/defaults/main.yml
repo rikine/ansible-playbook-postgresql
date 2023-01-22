@@ -26,7 +26,7 @@ postgresql_replication_hba_method: md5
 
 postgresql_data_dir: "/var/lib/postgresql/{{ postgresql_version }}"
 postgresql_config_dir: "/etc/postgresql/{{ postgresql_version }}/main"
-postgresql_new_data_dir: /tmp/postgresql
+postgresql_new_data_dir: "/tmp/postgresql"
 
 postgresql_users: #[]
   - name: Nikita
