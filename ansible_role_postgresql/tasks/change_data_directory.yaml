@@ -4,7 +4,7 @@
     name: "{{ postgresql_service_name }}"
     state: stopped
 
-- name: "Postgresql | Rsync directories"
+- name: "Postgresql | Rsync directories {{ inventory_hostname }}"
   synchronize:
     src: "{{ postgresql_data_dir }}"
     dest: "{{ postgresql_new_data_dir }}"
