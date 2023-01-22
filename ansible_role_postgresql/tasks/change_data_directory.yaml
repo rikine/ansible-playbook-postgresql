@@ -4,12 +4,6 @@
     name: "{{ postgresql_service_name }}"
     state: stopped
 
-- name: "Postgresql | Rsync directories {{ inventory_hostname }}"
-  synchronize:
-    src: "{{ postgresql_data_dir }}"
-    dest: "{{ postgresql_new_data_dir }}"
-  delegate_to: "{{ inventory_hostname }}"
-
 - name: "Postgresql | Configure postgresql.conf"
   lineinfile:
     path: "{{ postgresql_config_dir }}/postgresql.conf"

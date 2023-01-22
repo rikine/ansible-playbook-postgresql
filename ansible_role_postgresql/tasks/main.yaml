@@ -32,13 +32,6 @@
     state: started
     enabled: "{{ postgresql_service_enabled }}"
 
-- include_tasks: change_data_directory.yaml
-  vars:
-    postgresql_new_dir_with_main_path: "{{ postgresql_new_data_dir }}/{{ postgresql_version }}/main"
-  when: 
-    - postgresql_new_data_dir != "" # new dir exists
-# if playbook runs several times
-
 - name: "Postgresql | Check if standby.signal exists"
   stat:
     path: "{{ postgresql_data_dir }}/main/standby.signal"
