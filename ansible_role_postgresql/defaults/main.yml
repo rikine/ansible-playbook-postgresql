@@ -29,7 +29,7 @@ postgresql_config_dir: "/etc/postgresql/{{ postgresql_version }}/main"
 postgresql_new_data_dir: /tmp/postgresql
 
 postgresql_users: #[]
-  - name: NikitaDb
+  - name: Nikita
     password: 1234qwerty
     encrypted: true # defaults to true
     role_attr_flags: SUPERUSER # defaults to not set
@@ -49,7 +49,7 @@ postgresql_databases: #[]
     conn_limit: # defaults to not set
     port: 5432 # defaults to not set
     # users configuration
-    roles: nikita
+    roles: Nikita
     privs: ALL # defaults to ALL
 
   - name: SanyaDb
@@ -59,5 +59,5 @@ postgresql_databases: #[]
     conn_limit: # defaults to not set
     port: 5432 # defaults to not set
     # users configuration
-    roles: sanya
+    roles: Sanya
     privs: ALL # defaults to ALL
