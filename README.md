@@ -1,1 +1,1 @@
-# ansible-playbook-postgresql
+# ansible-role-postgresql
